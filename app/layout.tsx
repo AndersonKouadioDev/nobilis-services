@@ -60,8 +60,8 @@ const title = localFont({
   });
 
 export const metadata: Metadata = {
-  title: "brin service clean",
-  description: "Service Clean",
+  title: "Nobilis Services",
+  description: "Services Immobilier",
 };
 
 export default function RootLayout({
