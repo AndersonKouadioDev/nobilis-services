@@ -10,23 +10,25 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   Button,
-  Input,
+
 } from "@nextui-org/react";
-import { CalendarDays, Search } from "lucide-react";
+import { CalendarDays, Phone, Search } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import BlackMenu from '../../ui/dropdown';
+import Input from "@/components/ui/searchbar";
 
 export const ChickenLogo = () => {
   return (
     <Link href="/" >
       <Image
-        src="/assets/images/icone.png"
+        src="/assets/images/logo.png"
         alt="Logo"
-        width={90} // Ajoutez la largeur (en pixels)
-        height={90} // Ajoutez la hauteur (en pixels)
+        width={40} // Ajoutez la largeur (en pixels)
+        height={40} // Ajoutez la hauteur (en pixels)
         priority // Optionnel, si vous voulez donner la priorité à ce chargement
-        className="cursor-pointer" // Ajout de la classe pour le curseur
+        className="cursor-pointer object-contain" // Ajout de la classe pour le curseur
       />
     </Link>
   );
@@ -37,17 +39,19 @@ export default function Head() {
   const pathname = usePathname();
 
   const menuItems = [
-    { name: "ACCUEIL", link: "/" },
-    { name: "A PROPOS", link: "/propos" },
-    { name: "SERVICES", link: "/services" },
-    { name: "BLOG", link: "/blog" },
-    { name: "CONTACT", link: "/contact" },
+    { name: "Accueil", link: "/" },
+    { name: "A propos", link: "/propos" },
+    { name: "Services", link: "/services" },
+    { name: "Blog", link: "/blog" },
+    { name: "Galeries", link: "/galeries" },
+    { name: "Demander un devis", link: "/devis" },
+    { name: "Contact", link: "/contact" },
   ];
 
   return (
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
-      className="bg-white font-worksans"
+      className="bg-transparent font-worksans"
       maxWidth="full"
       height={90}
     >
@@ -59,11 +63,12 @@ export default function Head() {
         />
         <NavbarBrand>
           <ChickenLogo />
+          <div className="font-Title text-primary text-4xl font-bold">NOBILIS SERVICES</div>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-6" justify="center">
-        {menuItems.map((item) => (
+        {/* {menuItems.map((item) => (
           <NavbarItem
             key={item.name}
             className={`${
@@ -81,18 +86,20 @@ export default function Head() {
               {item.name}
             </Link>
           </NavbarItem>
-        ))}
-        <NavbarItem>
-        <Input color="default" type="text" variant="underlined" label="Recherche" className="w-full" endContent={<Search className="w-5 h-5 text-black" />}/>
-        </NavbarItem>
+        ))} */}
+        
       </NavbarContent>
 
       <NavbarContent justify="end">
         {/* <NavbarItem>
         <Input color="default" type="text" variant="underlined" label="Recherche" className="w-full" endContent={<Search className="w-5 h-5 text-black" />}/>
         </NavbarItem> */}
+        <NavbarItem className="flex gap-2 items-center text-secondary">
+          <Phone size={20}/>
+          <div>+225  51 3237 8321</div>
+        </NavbarItem>
         <NavbarItem>
-            <Button
+            {/* <Button
               as={Link}
               className="hidden md:flex bg-secondary text-white gap-2"
               href="/brinner"
@@ -100,7 +107,11 @@ export default function Head() {
             >
               <CalendarDays className="w-5 h-5" />
               Réserver un brinner
-            </Button>
+            </Button> */}
+            <BlackMenu/>
+        </NavbarItem>
+        <NavbarItem>
+          <Input/>
         </NavbarItem>
       </NavbarContent>
 

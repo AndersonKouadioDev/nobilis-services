@@ -1,51 +1,52 @@
 import React from 'react';
-import { Facebook, Instagram, Linkedin, Twitter,  } from 'lucide-react';
-import Image from 'next/image';
+import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 import Link from 'next/link';
 
 const Footer = () => {
   return (
     <footer className="w-full">
       {/* Main Footer Content */}
-      <div className="bg-[#002848] text-white px-8 pt-20 pb-10 ">
-        <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="bg-primary text-white px-8 pt-20 pb-10">
+        <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-around gap-8">
+          
           {/* Logo Section */}
-          <div className="flex flex-col justify-start md:justify-start gap-4 items-start md:items-center">
-            <div className="w-32 h-32 relative">
-              <Image
-                src="/assets/images/logo_2.png"
-                alt="Logo"
-                layout="fill" // Permet d'adapter l'image à la taille de son conteneur
-                objectFit="contain" // Équivalent à "object-contain" en CSS
-              />
+          <div className="flex flex-col justify-center gap-4 md:gap-10 items-start">
+            {/* Address Section */}
+            <div className="flex flex-col gap-1 items-start font-subtitle">
+              <div>Abidjan, Marcory Zone 4</div>
+              <div>Rue Alex Fleming Immeuble SACS</div>
             </div>
+
+            {/* Social Media Links */}
             <div className="flex flex-wrap md:flex-row gap-4 items-center">
-            <Link href="/" className="hover:opacity-80 transition-opacity">
-              <Facebook className="w-6 h-6 text-blue-700 hover:text-blue-900" />
-            </Link>
-            <Link href="/" className="hover:opacity-80 transition-opacity">
-              <Instagram className="w-6 h-6 text-blue-700 hover:text-blue-900" />
-            </Link>
-            <Link href="/" className="hover:opacity-80 transition-opacity">
-              <Twitter className="w-6 h-6 text-blue-700 hover:text-blue-900" />
-            </Link>
-            <Link href="/" className="hover:opacity-80 transition-opacity">
-              <Linkedin className="w-6 h-6 text-blue-700 hover:text-blue-900" />
-            </Link>
-          </div>
+              <Link href="/" className="hover:opacity-80 transition-opacity">
+                <Facebook className="w-6 h-6 text-white hover:text-gray-300" />
+              </Link>
+              <Link href="/" className="hover:opacity-80 transition-opacity">
+                <Instagram className="w-6 h-6 text-white hover:text-gray-300" />
+              </Link>
+              <Link href="/" className="hover:opacity-80 transition-opacity">
+                <Twitter className="w-6 h-6 text-white hover:text-gray-300" />
+              </Link>
+              <Link href="/" className="hover:opacity-80 transition-opacity">
+                <Linkedin className="w-6 h-6 text-white hover:text-gray-300" />
+              </Link>
+            </div>
           </div>
 
           {/* Explorer Section */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Liens rapide</h3>
+            <h3 className="text-xl font-bold mb-4">Liens rapides</h3>
             <ul className="space-y-6">
               <li><Link href="/propos" className="hover:text-primary-300">A propos</Link></li>
               <li><Link href="/services" className="hover:text-primary-300">Services</Link></li>
+              <li><Link href="/galerie" className="hover:text-primary-300">Galeries</Link></li>
               <li><Link href="/blog" className="hover:text-primary-300">Blog</Link></li>
+              <li><Link href="/contact" className="hover:text-primary-300">Contacts</Link></li>
             </ul>
           </div>
 
-          {/* Légales Section */}
+          {/* Legal Section */}
           <div>
             <h3 className="text-xl font-bold mb-4">LÉGALES</h3>
             <ul className="space-y-6">
@@ -55,38 +56,26 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Nos Plats Section */}
-          <div>
-            <div className="flex flex-col gap-0">
-            <h3 className="text-xl font-bold mb-4">Contacts</h3>
-            {/* <div className="border-b w-20"></div> */}
-            </div>
-            <ul className="space-y-6">
-              <li className="hover:text-primary-300">(+225) 01 02 34 56 78</li>
-              <li className="hover:text-primary-300">info@email.com</li>
-              <li className="hover:text-primary-300">Abidjan Plateau, Immeuble Postel 7ème étage</li>
-            </ul>
-          </div>
         </div>
       </div>
 
       {/* Copyright Bar */}
-        <div className="bg-[#002848] py-6 px-4 text-center text-white border-t  text-sm">
-          <p>
-            Copyright Brin Service Clean, 2025 Tous droits réservés |{" "}
-            <span>
-              Designed by{" "}
-              <Link 
-                href="https://lunion-lab.com" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-primary font-semibold underline hover:text-primary-700"
-              >
-                Lunions-Lab
-              </Link>
-            </span>
-          </p>
-        </div>
+      <div className="bg-primary py-6 px-4 text-center text-white border-t text-sm">
+        <p>
+          © Copyright 2025 |{" "}
+          <span>
+            Designed by{" "}
+            <Link 
+              href="https://lunion-lab.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-primary font-semibold underline hover:text-primary-700"
+            >
+              Lunions-Lab
+            </Link>
+          </span>
+        </p>
+      </div>
     </footer>
   );
 };

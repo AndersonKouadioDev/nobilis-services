@@ -5,8 +5,8 @@ import localFont from "next/font/local";
 
 
 import { Providers } from "@/providers/providers";
-// import Head from "@/components/home/navbar/navbar";
-// import Footer from "@/components/home/footer/footer";
+ import Head from "@/components/home/navbar/navbar";
+ import Footer from "@/components/home/footer/footer";
 
 const Title = Maven_Pro (
   {
@@ -74,10 +74,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${worksans.variable} ${bevietnampro.variable} ${title.variable} ${Title.variable} ${subtitle.variable} antialiased`}
       >
-      <div className="font-bevietnampro max-w-screen-2xl mx-auto ">
-        {/* <Head/> */}
+      <div className="font-subtitle max-w-screen-2xl mx-auto ">
+        <Head/>
           <Providers>{children}</Providers>
-        {/* <Footer/> */}
+        <Footer/>
       </div> 
       </body>
     </html>
