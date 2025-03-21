@@ -69,7 +69,7 @@ const Footer = () => {
               href="https://lunion-lab.com" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-primary font-semibold underline hover:text-primary-700"
+              className="text-white font-semibold underline hover:text-primary-700"
             >
               Lunions-Lab
             </Link>
