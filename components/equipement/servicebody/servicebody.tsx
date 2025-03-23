@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { CheckCircle } from "lucide-react";
 
-export default function NobilisImmobilier() {
+export default function NobilisEquipement() {
   return (
     <div className="bg-gray-50 min-h-screen p-6 md:p-8">
       <div className="max-w-6xl mx-auto">
@@ -10,29 +10,29 @@ export default function NobilisImmobilier() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <div className="flex flex-col justify-center text-center md:text-left">
             <h1 className="text-3xl font-bold text-gray-800 mb-4">
-              Nobilis Immobilier - Trouvez le bien qui vous correspond !
+            Nobilis Équipement – Du matériel de qualité pour vos projets
             </h1>
             <p className="text-gray-600">
-              Que vous soyez à la recherche d'un logement, d'un local professionnel ou d'un investissement rentable, Nobilis Immo met son expertise à votre service. Grâce à notre connaissance du marché et notre accompagnement sur mesure, nous facilitons votre projet immobilier en toute sérénité.
+            Pour mener à bien vos travaux et projets, il vous faut des équipements fiables et performants. Nobilis Équipement sélectionne pour vous des produits de qualité, adaptés aux exigences des professionnels comme des particuliers.
             </p>
           </div>
 
           <div className="bg-blue-100 rounded-lg p-6 flex flex-col gap-4">
             {[
               {
-                title: "Vente de biens immobiliers",
+                title: "Matériel de construction",
                 description:
-                  "Trouvez la propriété idéale ou vendez au meilleur prix avec notre réseau d'experts.",
+                  " Des outils et équipements robustes.",
               },
               {
-                title: "Location",
+                title: "Équipements industriels",
                 description:
-                  "Nous facilitons la mise en relation entre propriétaires et locataires.",
+                  "Solutions adaptées aux professionnels.",
               },
               {
-                title: "Gestion immobilière",
+                title: " Fournitures diverses",
                 description:
-                  "Confiez-nous l'entretien et l'administration de vos biens en toute sérénité.",
+                  "Tout le nécessaire pour vos projets.",
               },
             ].map((service, index) => (
               <div key={index} className="flex items-start gap-3">
@@ -65,19 +65,24 @@ export default function NobilisImmobilier() {
         <div className="flex flex-wrap justify-center gap-6">
           {[
             {
-              title: "Vente de biens immobiliers",
-              image: "/assets/images/illustrations/service-items/bienimmobilier.png",
-              alt: "Vente immobilière",
+              title: "Sièges",
+              image: "/assets/images/illustrations/service-items/sieges.png",
+              alt: "Sièges",
             },
             {
-              title: "Location",
-              image: "/assets/images/illustrations/service-items/location.png",
-              alt: "Location",
+              title: "Armoires",
+              image: "/assets/images/illustrations/service-items/armoires.png",
+              alt: "Armoires",
             },
             {
-              title: "Gestion immobilière",
-              image: "/assets/images/illustrations/service-items/gestion-immobilier.png",
-              alt: "Gestion immobilière",
+              title: "Lampes",
+              image: "/assets/images/illustrations/service-items/lampes.png",
+              alt: "Lampes",
+            },
+            {
+              title: "Tables",
+              image: "/assets/images/illustrations/service-items/tables.png",
+              alt: "Tables",
             },
           ].map((service, index) => (
             <div

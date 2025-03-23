@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { CheckCircle } from "lucide-react";
 
-export default function NobilisImmobilier() {
+export default function NobilisSolution() {
   return (
     <div className="bg-gray-50 min-h-screen p-6 md:p-8">
       <div className="max-w-6xl mx-auto">
@@ -10,29 +10,29 @@ export default function NobilisImmobilier() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <div className="flex flex-col justify-center text-center md:text-left">
             <h1 className="text-3xl font-bold text-gray-800 mb-4">
-              Nobilis Immobilier - Trouvez le bien qui vous correspond !
+            Nobilis Solutions – Des services sur mesure pour votre confort
             </h1>
             <p className="text-gray-600">
-              Que vous soyez à la recherche d'un logement, d'un local professionnel ou d'un investissement rentable, Nobilis Immo met son expertise à votre service. Grâce à notre connaissance du marché et notre accompagnement sur mesure, nous facilitons votre projet immobilier en toute sérénité.
+            Un environnement bien entretenu et fonctionnel est essentiel pour votre bien-être et votre productivité. Nobilis Solutions vous propose des prestations professionnelles dans plusieurs domaines pour garantir confort et sécurité à votre domicile ou votre entreprise.
             </p>
           </div>
 
           <div className="bg-blue-100 rounded-lg p-6 flex flex-col gap-4">
             {[
               {
-                title: "Vente de biens immobiliers",
+                title: "Climatisation",
                 description:
-                  "Trouvez la propriété idéale ou vendez au meilleur prix avec notre réseau d'experts.",
+                  " Installation et entretien pour un confort optimal.",
               },
               {
-                title: "Location",
+                title: "Nettoyage professionnel",
                 description:
-                  "Nous facilitons la mise en relation entre propriétaires et locataires.",
+                  " Espaces propres et hygiéniques, adaptés à vos besoins.",
               },
               {
-                title: "Gestion immobilière",
+                title: " Maintenance et dépannage",
                 description:
-                  "Confiez-nous l'entretien et l'administration de vos biens en toute sérénité.",
+                  " Des interventions rapides et efficaces.",
               },
             ].map((service, index) => (
               <div key={index} className="flex items-start gap-3">
@@ -65,19 +65,19 @@ export default function NobilisImmobilier() {
         <div className="flex flex-wrap justify-center gap-6">
           {[
             {
-              title: "Vente de biens immobiliers",
-              image: "/assets/images/illustrations/service-items/bienimmobilier.png",
-              alt: "Vente immobilière",
+              title: "Climatisation",
+              image: "/assets/images/illustrations/service-items/climatisation.png",
+              alt: "Climatisation",
             },
             {
-              title: "Location",
-              image: "/assets/images/illustrations/service-items/location.png",
-              alt: "Location",
+              title: "Nettoyage professionnel",
+              image: "/assets/images/illustrations/service-items/nettoyageprofessionnel.png",
+              alt: "Nettoyage professionnel",
             },
             {
-              title: "Gestion immobilière",
-              image: "/assets/images/illustrations/service-items/gestion-immobilier.png",
-              alt: "Gestion immobilière",
+              title: "Maintenance et dépannage",
+              image: "/assets/images/illustrations/service-items/maintenance&depannage.png",
+              alt: "Maintenance et dépannage",
             },
           ].map((service, index) => (
             <div
