@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { CheckCircle } from "lucide-react";
 
 export default function NobilisImmobilier() {
@@ -68,27 +69,29 @@ export default function NobilisImmobilier() {
               title: "Vente de biens immobiliers",
               image: "/assets/images/illustrations/service-items/bienimmobilier.png",
               alt: "Vente immobilière",
+              link: "/services/vente",
             },
             {
               title: "Location",
               image: "/assets/images/illustrations/service-items/location.png",
               alt: "Location",
+              link: "/services/location",
             },
             {
               title: "Gestion immobilière",
               image: "/assets/images/illustrations/service-items/gestion-immobilier.png",
               alt: "Gestion immobilière",
+              link: "/services/gestion",
             },
           ].map((service, index) => (
-            <div
-              key={index}
-              className="bg-blue-100 p-4 rounded-2xl text-center w-72 flex flex-col justify-between items-center shadow-md"
-            >
-              <div className="relative w-full h-40">
-                <Image src={service.image} alt={service.alt} fill className="object-contain" />
+            <Link key={index} href={service.link} className="w-72">
+              <div className="bg-blue-100 p-4 rounded-2xl text-center flex flex-col justify-between items-center shadow-md transition-transform transform hover:scale-105 cursor-pointer">
+                <div className="relative w-full h-40">
+                  <Image src={service.image} alt={service.alt} fill className="object-contain" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-700 mt-4">{service.title}</h3>
               </div>
-              <h3 className="text-lg font-semibold text-gray-700 mt-4">{service.title}</h3>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

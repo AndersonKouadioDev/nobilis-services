@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Propos() {
   return (
-    <section className="p-8 flex justify-center items-center">
+    <section className="p-4 md:p-8 flex justify-center items-center">
       <div className="max-w-5xl flex flex-col md:flex-row items-center gap-10">
         {/* Texte et informations */}
         <div className="max-w-lg space-y-6 text-muted">

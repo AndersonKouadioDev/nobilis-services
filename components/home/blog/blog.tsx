@@ -34,7 +34,7 @@ export default function Blog(){
 
     return (
         <div className="bg-[#E6EEF5] p-10">
-            <div className="flex flex-col gap-6 py-20 items-center">
+            <div className="flex flex-col gap-6 py-10 md:py-20 items-center">
                 <div className="text-primary text-2xl font-extrabold">Blog</div>
                 <div className="text-center text-muted font-semibold">Nous sommes passionner de travailler avec vous</div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-12">

@@ -30,19 +30,19 @@ export default function Service(){
     ]
 
     return(
-        <div className="p-6">
+        <div className="px-6 py-16 my-8">
             <div className="flex flex-col gap-2 items-center justify-center mb-16">
                 <div className="text-primary text-2xl font-extrabold">Nos Services</div>
-                <div className="text-center text-muted font-semibold">Nobilis Services vous accompagne dans trois domaines clés :  l’immobilier, les solutions professionnelles et l’équipement. Découvrez nos services adaptés à vos besoins.</div>
+                <div className="text-center text-muted font-semibold mx-auto md:mx-20">Nobilis Services vous accompagne dans trois domaines clés :  l’immobilier, les solutions professionnelles et l’équipement. Découvrez nos services adaptés à vos besoins.</div>
             </div>
-            <div className="flex justify-center gap-4">
+            <div className="flex flex-col md:flex-row justify-around gap-14 md:gap-4">
                 {
                     Data.map((item)=>(
                         <div className="border-2 relative border-muted border-dashed rounded-b-3xl flex flex-col px-4 py-8 justify-between items-center">
                             <Image
                             src={item.picture}
                             height={220}
-                            width={150}
+                            width={190}
                             alt={item.name}
                             className="rounded-2xl object-contain relative bottom-16 min-h-[15px]"
                             />

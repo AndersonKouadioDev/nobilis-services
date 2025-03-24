@@ -94,7 +94,7 @@ export default function Head() {
         {/* <NavbarItem>
         <Input color="default" type="text" variant="underlined" label="Recherche" className="w-full" endContent={<Search className="w-5 h-5 text-black" />}/>
         </NavbarItem> */}
-        <NavbarItem className="flex gap-2 items-center text-secondary">
+        <NavbarItem className="hidden md:flex gap-2 items-center text-secondary">
           <Phone size={20}/>
           <div>+225  51 3237 8321</div>
         </NavbarItem>
@@ -108,14 +108,19 @@ export default function Head() {
               <CalendarDays className="w-5 h-5" />
               Réserver un brinner
             </Button> */}
+            <div className="hidden md:block">
             <BlackMenu/>
+            </div>
+            
         </NavbarItem>
         <NavbarItem>
+          <div className="hidden lg:block">
           <Input/>
+          </div>
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarMenu className="bg-primary">
+      <NavbarMenu className="bg-muted">
         {menuItems.map((item) => (
           <NavbarMenuItem key={item.name}>
             <Link className="w-full h-full text-white" href={item.link}>
@@ -124,7 +129,7 @@ export default function Head() {
           </NavbarMenuItem>
         ))}
         <NavbarItem>
-        <Button
+        {/* <Button
               as={Link}
               className=" bg-secondary text-white gap-2 flex font-semibold w-full"
               href="/brinner"
@@ -132,7 +137,7 @@ export default function Head() {
             >
               <CalendarDays className="w-5 h-5" />
               Réserver un brinner
-            </Button>
+            </Button> */}
         </NavbarItem>
       </NavbarMenu>
     </Navbar>
