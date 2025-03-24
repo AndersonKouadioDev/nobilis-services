@@ -58,7 +58,7 @@ export default function Blog(){
                     </div>
                   ))}
                 </div>
-                <Button className="bg-muted text-white" radius='full'>Voir plus d'article</Button>
+                <Button className="bg-muted text-white" radius='full'>Voir plus d&apos;article</Button>
             </div>
         </div>
     )

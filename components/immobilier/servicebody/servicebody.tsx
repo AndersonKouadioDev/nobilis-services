@@ -14,7 +14,7 @@ export default function NobilisImmobilier() {
               Nobilis Immobilier - Trouvez le bien qui vous correspond !
             </h1>
             <p className="text-gray-600">
-              Que vous soyez à la recherche d'un logement, d'un local professionnel ou d'un investissement rentable, Nobilis Immo met son expertise à votre service. Grâce à notre connaissance du marché et notre accompagnement sur mesure, nous facilitons votre projet immobilier en toute sérénité.
+              Que vous soyez à la recherche d&apos;un logement, d&apos;un local professionnel ou d&apos;un investissement rentable, Nobilis Immo met son expertise à votre service. Grâce à notre connaissance du marché et notre accompagnement sur mesure, nous facilitons votre projet immobilier en toute sérénité.
             </p>
           </div>
 

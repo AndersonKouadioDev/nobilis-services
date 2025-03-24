@@ -9,11 +9,11 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-  Button,
+
 
 } from "@nextui-org/react";
-import { CalendarDays, Phone, Search } from "lucide-react";
-import { usePathname } from "next/navigation";
+import {  Phone } from "lucide-react";
+// import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import BlackMenu from '../../ui/dropdown';
@@ -36,7 +36,7 @@ export const ChickenLogo = () => {
 
 export default function Head() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const pathname = usePathname();
+  // const pathname = usePathname();
 
   const menuItems = [
     { name: "Accueil", link: "/" },

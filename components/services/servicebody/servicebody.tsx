@@ -28,7 +28,7 @@ export default function ServicesBody() {
     <div className="bg-white py-12 px-4">
       <div className="max-w-6xl mx-auto">
         <p className="text-center text-gray-600 mb-10 max-w-3xl mx-auto">
-          Nobilis Services vous accompagne dans trois domaines clés : l'immobilier, les solutions professionnelles et l'équipement. Découvrez nos services adaptés à vos besoins.
+          Nobilis Services vous accompagne dans trois domaines clés : l&apos;immobilier, les solutions professionnelles et l&apos;équipement. Découvrez nos services adaptés à vos besoins.
         </p>
         
         <div className="flex flex-col md:flex-row justify-around items-center gap-10">

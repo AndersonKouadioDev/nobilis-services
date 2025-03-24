@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import Image from "next/image";
 
 export default function Role() {
   return (
@@ -11,14 +12,16 @@ export default function Role() {
             <h2 className="text-purple-600 font-semibold tracking-wide">NOTRE MISSION</h2>
           </div>
           <p className="text-gray-800">
-            An IT firm or MSP who keeps your IT running smoothly at all times is like a plumber who fixes your pipes; that's what they are supposed to do. Many IT firms struggle to keep themselves and their IT from falling apart. We've raised
+            An IT firm or MSP who keeps your IT running smoothly at all times is like a plumber who fixes your pipes; that&apos;s what they are supposed to do. Many IT firms struggle to keep themselves and their IT from falling apart. We&apos;ve raised
           </p>
         </div>
-        <div className="md:w-2/5">
-          <img 
-            src="/assets/images/illustrations/propos/mission.png" 
-            alt="Construction worker with surveying equipment" 
-            className="w-full h-full object-cover"
+        <div className="md:w-2/5 relative h-64">
+          <Image
+            src="/assets/images/illustrations/propos/mission.png"
+            alt="Construction worker with surveying equipment"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-none"
           />
         </div>
       </div>
@@ -31,14 +34,16 @@ export default function Role() {
             <h2 className="text-purple-600 font-semibold tracking-wide">NOTRE VISION</h2>
           </div>
           <p className="text-gray-800">
-            An IT firm or MSP who keeps your IT running smoothly at all times is like a plumber who fixes your pipes; that's what they are eir IT from falling apart. We've raised
+            An IT firm or MSP who keeps your IT running smoothly at all times is like a plumber who fixes your pipes; that&apos;s what they are eir IT from falling apart. We&apos;ve raised
           </p>
         </div>
-        <div className="md:w-2/5">
-          <img 
-            src="/assets/images/illustrations/propos/vision.png" 
-            alt="Professional woman in business attire" 
-            className="w-full h-full object-cover"
+        <div className="md:w-2/5 relative h-64">
+          <Image
+            src="/assets/images/illustrations/propos/vision.png"
+            alt="Professional woman in business attire"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-none"
           />
         </div>
       </div>

@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="relative flex items-center justify-between w-full h-[calc(100vh-100px)]">
+    <div className="relative flex items-center justify-between w-full min-h-[calc(100vh-300px)] lg:min-h-[calc(100vh-100px)]">
       <Image
         className="absolute inset-0 w-full h-full object-cover shrink-0"
         src="/assets/images/backgrounds/bg-galerie.png"

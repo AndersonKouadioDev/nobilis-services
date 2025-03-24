@@ -38,7 +38,7 @@ export default function Service(){
             <div className="flex flex-col md:flex-row justify-around gap-14 md:gap-4">
                 {
                     Data.map((item)=>(
-                        <div className="border-2 relative border-muted border-dashed rounded-b-3xl flex flex-col px-4 py-8 justify-between items-center">
+                        <div key={item.name} className="border-2 relative border-muted border-dashed rounded-b-3xl flex flex-col px-4 py-8 justify-between items-center">
                             <Image
                             src={item.picture}
                             height={220}

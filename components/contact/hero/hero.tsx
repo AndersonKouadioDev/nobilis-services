@@ -32,7 +32,7 @@ export default function Hero() {
           {/* Section de gauche avec le texte */}
           <div className="bg-transparent p-8 text-white md:w-1/2 flex flex-col justify-center">
             <h2 className="text-3xl font-bold drop-shadow mb-4">Contactez Nous </h2>
-            <h2 className="text-xl font-semibold mb-4">Donnez-nous une touche pour plus d'informations</h2>
+            <h2 className="text-xl font-semibold mb-4">Donnez-nous une touche pour plus d&apos;informations</h2>
             <p className="text-sm font-extralight">
             Inscrivez-vous et profitez de tous les avantages que nous vous proposons, saisissez vos plats et démarrez la transformation de votre restaurant :
             </p>
@@ -47,7 +47,7 @@ export default function Hero() {
               <Textarea size="sm" name="message" label="Message"  variant="bordered" />
               
               <Checkbox name="acceptPolicy" >
-                J'ai lu et accepté la politique de confidentialité.
+                J&apos;ai lu et accepté la politique de confidentialité.
               </Checkbox>
 
               <div className="flex justify-start">

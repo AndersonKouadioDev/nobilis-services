@@ -21,7 +21,7 @@ export default function Info() {
       <Card className="flex flex-col md:flex-row rounded-2xl bg-transparent overflow-hidden relative z-10 shadow-lg">
         {/* Section de gauche avec le texte */}
         <div className="bg-transparent p-6 md:p-8 text-black md:text-white md:w-1/2 flex flex-col justify-center text-center md:text-left">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">Contactez-nous pour plus d'informations</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Contactez-nous pour plus d&apos;informations</h2>
           <p className="text-sm md:text-base">
             Inscrivez-vous et profitez de tous les avantages que nous vous proposons. 
             Saisissez vos informations et commencez votre transformation.
@@ -37,7 +37,7 @@ export default function Info() {
             <Textarea name="message" label="Message" isRequired variant="bordered" fullWidth />
             
             <Checkbox name="acceptPolicy" isRequired>
-              J'ai lu et accepté la politique de confidentialité.
+              J&apos;ai lu et accepté la politique de confidentialité.
             </Checkbox>
 
             <div className="flex justify-center md:justify-start">
