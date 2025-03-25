@@ -19,14 +19,14 @@ export default function MoreInfo() {
   return (
     <>
       <Button color="primary" className="text-white px-6 py-3 rounded-lg self-start" onPress={onOpen}>
-        Confiez-nous votre patrimoine dès aujourd'hui
+        Confiez-nous votre patrimoine dès aujourd&apos;hui
       </Button>
 
       <Modal isOpen={isOpen} placement="center" backdrop="blur" size="full" onOpenChange={onOpenChange}>
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1">Plus d'information sur l'offre</ModalHeader>
+              <ModalHeader className="flex flex-col gap-1">Plus d&apos;information sur l&apos;offre</ModalHeader>
               <ModalBody>
                 <div className="space-y-4">
                   <Input type="text" label="Nom et prénom" fullWidth />
@@ -35,7 +35,7 @@ export default function MoreInfo() {
                   <Textarea label="Message" fullWidth minRows={4} />
                   
                   <Checkbox>
-                    J'ai lu et j'accepte la politique de confidentialité.
+                    J&apos;ai lu et j&apos;accepte la politique de confidentialité.
                   </Checkbox>
                 </div>
               </ModalBody>

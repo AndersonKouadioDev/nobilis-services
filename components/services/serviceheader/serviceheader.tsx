@@ -19,7 +19,7 @@ export default function ServicesHeader() {
 
       <div className="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
         {tabs.map((tab) => (
-          <Link key={tab.id} href={tab.link} passHref>
+          <Link key={tab.id} href={tab.link} >
             <Button
               radius="full"
               className="bg-transparent hover:bg-[#FFF8F6] hover:border active:bg-[#FFF8F6] active:border"

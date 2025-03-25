@@ -1,6 +1,7 @@
 import { Button } from "@nextui-org/react";
 import { MapPin, Bed, Bath, Ruler } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from 'react';
 
 export default function LocationBody() {
@@ -78,9 +79,11 @@ export default function LocationBody() {
               <div className="text-xl font-bold text-primary">
                 ${listing.price}/month
               </div>
-              <Button className="bg-primary text-white px-4 py-2 rounded hover:bg-blue-700">
-                Interessé
-              </Button>
+                <Link href="/services/immobilier/vente/description">
+                <Button className="bg-primary text-white px-4 py-2 rounded hover:bg-blue-700">
+                  Interessé
+                </Button>
+                </Link>
             </div>
           </div>
         </div>

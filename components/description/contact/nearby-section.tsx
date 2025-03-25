@@ -2,6 +2,7 @@ import { Avatar } from "@nextui-org/react"
 import { Button } from "@nextui-org/react"
 import { Input } from "@nextui-org/react"
 import { Textarea } from "@nextui-org/react"
+import Image from "next/image"
 import { GraduationCap, Stethoscope, Utensils, Landmark } from "lucide-react"
 
 export default function NearbySection() {
@@ -10,7 +11,7 @@ export default function NearbySection() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* What's nearby section */}
         <div className="lg:col-span-8">
-          <h2 className="text-2xl font-bold mb-6">What's nearby</h2>
+          <h2 className="text-2xl font-bold mb-6">What&apos;s nearby</h2>
 
           {/* Education */}
           <div className="mb-8">
@@ -107,9 +108,15 @@ export default function NearbySection() {
             <h2 className="text-xl font-bold mb-4">Contact agent</h2>
 
             <div className="flex items-center gap-3 mb-6">
-              <Avatar className="h-10 w-10 border-2 border-white">
-                <img src="/placeholder.svg?height=40&width=40" alt="Emilia Buck" />
-              </Avatar>
+                <Avatar className="h-10 w-10 border-2 border-white">
+                <Image 
+                  src="/assets/images/illustrations/service-items/contact.png" 
+                  alt="Emilia Buck" 
+                  width={40} 
+                  height={40} 
+                  className="rounded-full"
+                />
+                </Avatar>
               <div>
                 <p className="font-medium">Emilia Buck</p>
                 <p className="text-sm text-blue-100">emilia@agentline.net</p>

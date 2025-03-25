@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import { LineChart, Shield, Eye, Handshake } from "lucide-react";
-import { Button } from "@nextui-org/react";
 import MoreInfo from './modal';
 
 export default function BienBody() {
@@ -47,7 +46,7 @@ export default function BienBody() {
         <div className="text-xs md:text-sm font-thin mb-6 drop-shadow-2xl text-center text-gray-800">Votre patrimoine mérite une gestion experte et sécurisée.</div>
         </div>
         <p className="text-gray-600 mb-8">
-          Chez Nobilis Immo, nous comprenons que votre patrimoine immobilier est bien plus qu'un simple investissement. C'est un projet de vie, une source de revenus ou encore un héritage précieux. C'est pourquoi nous vous offrons une gestion rigoureuse, transparente et performante pour valoriser et sécuriser vos biens.
+          Chez Nobilis Immo, nous comprenons que votre patrimoine immobilier est bien plus qu&apos;un simple investissement. C&apos;est un projet de vie, une source de revenus ou encore un héritage précieux. C&apos;est pourquoi nous vous offrons une gestion rigoureuse, transparente et performante pour valoriser et sécuriser vos biens.
         </p>
 
         {/* Features Grid */}
