@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { LineChart, Shield, Eye, Handshake } from "lucide-react";
 import { Button } from "@nextui-org/react";
+import MoreInfo from './modal';
 
 export default function BienBody() {
   const features = [
@@ -60,9 +61,7 @@ export default function BienBody() {
         </div>
 
         {/* Call to Action Button */}
-        <Button color="primary" className=" text-white px-6 py-3 rounded-lg self-start">
-          Confiez-nous votre patrimoine dès aujourd'hui
-        </Button>
+        <MoreInfo/>
       </div>
     </div>
   );

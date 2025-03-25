@@ -1,9 +1,14 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle } from "lucide-react";
+import { Button, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader } from "@nextui-org/react";
+
 
 export default function NobilisImmobilier() {
+  const [isOpen, setIsOpen] = useState(false);  
   return (
     <div className="bg-gray-50 min-h-screen p-6 md:p-8">
       <div className="max-w-6xl mx-auto">
@@ -64,28 +69,33 @@ export default function NobilisImmobilier() {
 
         {/* Services Section */}
         <div className="flex flex-wrap justify-center gap-6">
+          {/* Vente de biens immobiliers - Ouvre un modal */}
+          <div onClick={() => setIsOpen(true)} className="w-72 cursor-pointer">
+            <div className="bg-blue-100 p-4 rounded-2xl text-center flex flex-col justify-between items-center shadow-md transition-transform transform hover:scale-105">
+              <div className="relative w-full h-40">
+                <Image src="/assets/images/illustrations/service-items/bienimmobilier.png" alt="Vente immobilière" fill className="object-contain" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-700 mt-4">Vente de biens immobiliers</h3>
+            </div>
+          </div>
+
+          {/* Autres services - Liens directs */}
           {[
-            {
-              title: "Vente de biens immobiliers",
-              image: "/assets/images/illustrations/service-items/bienimmobilier.png",
-              alt: "Vente immobilière",
-              link: "/services/vente",
-            },
             {
               title: "Location",
               image: "/assets/images/illustrations/service-items/location.png",
               alt: "Location",
-              link: "/services/location",
+              link: "/services/immobilier/location",
             },
             {
               title: "Gestion immobilière",
               image: "/assets/images/illustrations/service-items/gestion-immobilier.png",
               alt: "Gestion immobilière",
-              link: "/services/gestion",
+              link: "/services/immobilier/bien",
             },
           ].map((service, index) => (
             <Link key={index} href={service.link} className="w-72">
-              <div className="bg-blue-100 p-4 rounded-2xl text-center flex flex-col justify-between items-center shadow-md transition-transform transform hover:scale-105 cursor-pointer">
+              <div className="bg-blue-100 p-4 rounded-2xl text-center flex flex-col justify-between items-center shadow-md transition-transform transform hover:scale-105">
                 <div className="relative w-full h-40">
                   <Image src={service.image} alt={service.alt} fill className="object-contain" />
                 </div>
@@ -95,6 +105,43 @@ export default function NobilisImmobilier() {
           ))}
         </div>
       </div>
+
+     {/* MODAL - Vente de biens immobiliers */}
+     <div>
+      <Modal isOpen={isOpen} size="xs" onClose={() => setIsOpen(false)}>
+        <ModalContent>
+          <ModalHeader></ModalHeader>
+          <ModalBody>
+          {[
+            {
+              title: "Appartement/Villa",
+              image: "/assets/images/illustrations/service-items/bienimmobilier.png",
+              alt: "Appartement/Villa",
+              link: "/services/immobilier/vente",
+            },
+            {
+              title: "Terrains",
+              image: "/assets/images/illustrations/service-items/bienimmobilier.png",
+              alt: "Terrains",
+              link: "/services/immobilier/terrain",
+            },
+          ].map((service, index) => (
+            <Link key={index} href={service.link} className="w-60">
+              <div className="bg-blue-100 p-4 rounded-2xl text-center flex flex-row justify-between items-center shadow-md transition-transform transform hover:scale-105">
+                <div className="relative w-full h-28">
+                  <Image src={service.image} alt={service.alt} fill className="object-contain" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-700 mt-4">{service.title}</h3>
+              </div>
+            </Link>
+          ))}
+          </ModalBody>
+          <ModalFooter>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+      </div>
+
     </div>
   );
 }
