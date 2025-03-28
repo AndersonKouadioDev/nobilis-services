@@ -13,7 +13,9 @@ import { Menu } from "lucide-react";
 import Link from "next/link";
 
 export default function BlackMenu() {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
+
+  
 
   const menuItems = [
     { name: "Accueil", link: "/" },
@@ -45,6 +47,7 @@ export default function BlackMenu() {
                     <Link
                       href={item.link}
                       className="block px-4 py-2 text-lg font-medium text-white transition-all duration-300 rounded-lg hover:bg-gray-800 hover:text-gray-300"
+                      onClick={onClose}
                     >
                       {item.name}
                     </Link>
