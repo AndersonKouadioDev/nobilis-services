@@ -1,33 +1,66 @@
-"use client"
-import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from "@nextui-org/react";
+"use client";
+import {
+  Drawer,
+  DrawerContent,
+  DrawerHeader,
+  DrawerBody,
+  DrawerFooter,
+  Button,
+  useDisclosure,
+} from "@nextui-org/react";
+
 import { Menu } from "lucide-react";
+import Link from "next/link";
 
+export default function BlackMenu() {
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
-export default function BlackMenu(){
-    const menuItems = [
-        { name: "Accueil", link: "/" },
-        { name: "A propos", link: "/propos" },
-        { name: "Services", link: "/services" },
-        { name: "Blog", link: "/blog" },
-        { name: "Galeries", link: "/galeries" },
-        { name: "Demander un devis", link: "/devis" },
-        { name: "Contact", link: "/contact" },
-      ];
-      return(
-        <Dropdown>
-        <DropdownTrigger>
-          <Button size="lg" radius="full" variant="flat" className="bg-black/50 text-white" endContent={<Menu color="white" size={20}/>}>Menu</Button>
-        </DropdownTrigger>
-        <DropdownMenu color="secondary" aria-label="Dynamic Actions" items={menuItems}>
-          {(item) => (
-            <DropdownItem
-              key={item.name}
-              href={item.link}
-            >
-              {item.name}
-            </DropdownItem>
+  const menuItems = [
+    { name: "Accueil", link: "/" },
+    { name: "A propos", link: "/propos" },
+    { name: "Services", link: "/services" },
+    { name: "Blog", link: "/blog" },
+    { name: "Galeries", link: "/galeries" },
+    { name: "Demander un devis", link: "/devis" },
+    { name: "Contact", link: "/contact" },
+  ];
+
+  return (
+    <>
+      <Button onPress={onOpen} size="lg" radius="full" variant="flat" className="bg-black/50 text-white">
+        <Menu color="white" size={20} /> Menu
+      </Button>
+
+      <Drawer size="xs" className="bg-black/50 text-white" isOpen={isOpen} onOpenChange={onOpenChange}>
+        <DrawerContent>
+          {() => (
+            <>
+              <DrawerHeader className="flex flex-col gap-1">
+                {/* Menu */}
+              </DrawerHeader>
+              <DrawerBody>
+              <ul className="space-y-2">
+                {menuItems.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.link}
+                      className="block px-4 py-2 text-lg font-medium text-white transition-all duration-300 rounded-lg hover:bg-gray-800 hover:text-gray-300"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </DrawerBody>
+              <DrawerFooter>
+                {/* <Button color="danger" variant="light" onPress={onClose}>
+                  Fermer
+                </Button> */}
+              </DrawerFooter>
+            </>
           )}
-        </DropdownMenu>
-      </Dropdown>
-      );
+        </DrawerContent>
+      </Drawer>
+    </>
+  );
 }

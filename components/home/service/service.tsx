@@ -1,6 +1,7 @@
 import { Button } from "@nextui-org/react";
 import { BrickWall, MoveRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 
 export default function Service(){
@@ -15,17 +16,17 @@ export default function Service(){
         {
             picture:"/assets/images/illustrations/page-accueil/div.service-img.png",
             name: "NOBILIS IMMOBILIER",
-            link:"/"
+            link:"/services/immobilier"
         },
         {
             picture:"/assets/images/illustrations/page-accueil/div.service-img-1.png",
             name: "NOBILIS SOLUTION",
-            link:"/"
+            link:"/services/solution"
         },
         {
             picture:"/assets/images/illustrations/page-accueil/div.service-img-2.png",
             name: "NOBILIS EQUIPEMENT",
-            link:"/"
+            link:"/services/equipement"
         }
     ]
 
@@ -48,7 +49,7 @@ export default function Service(){
                             />
                             <BrickWall color="black" size={40} className="bg-gray-200 p-2 rounded-full"/>
                             <div className="font-bold pb-5">{item.name}</div>
-                            <Button href={item.link} className="bg-black text-white rounded-t-full"><MoveRight/></Button>
+                            <Button as={Link} href={item.link} className="bg-black text-white rounded-t-full"><MoveRight/></Button>
                         </div>
                     ))
                 }

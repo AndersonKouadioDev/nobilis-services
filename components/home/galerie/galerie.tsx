@@ -1,6 +1,7 @@
 import { Button } from '@nextui-org/react';
 import { MapPin } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 export default function Galerie() {
@@ -66,7 +67,7 @@ export default function Galerie() {
         </div>
         
         <div className="flex justify-center mt-8">
-          <Button className="bg-gray-600 hover:bg-gray-700 text-white py-2 px-6 rounded-full transition-colors">
+          <Button as={Link} href="/galeries" className="bg-gray-600 hover:bg-gray-700 text-white py-2 px-6 rounded-full transition-colors">
             Voir Plus
           </Button>
         </div>

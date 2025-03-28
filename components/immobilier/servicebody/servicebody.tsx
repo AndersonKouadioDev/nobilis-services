@@ -108,7 +108,7 @@ export default function NobilisImmobilier() {
 
      {/* MODAL - Vente de biens immobiliers */}
      <div>
-      <Modal isOpen={isOpen} size="xs" onClose={() => setIsOpen(false)}>
+      <Modal isOpen={isOpen} className="bg-black/50 text-white" onClose={() => setIsOpen(false)} backdrop="opaque">
         <ModalContent>
           <ModalHeader></ModalHeader>
           <ModalBody>
@@ -126,8 +126,8 @@ export default function NobilisImmobilier() {
               link: "/services/immobilier/terrain",
             },
           ].map((service, index) => (
-            <Link key={index} href={service.link} className="w-60">
-              <div className="bg-blue-100 p-4 rounded-2xl text-center flex flex-row justify-between items-center shadow-md transition-transform transform hover:scale-105">
+            <Link key={index} href={service.link} className="flex flex-col justify-center gap-2">
+              <div className="bg-blue-50/80 p-4 rounded-2xl text-center flex flex-col justify-between items-center shadow-md transition-transform transform hover:scale-105">
                 <div className="relative w-full h-28">
                   <Image src={service.image} alt={service.alt} fill className="object-contain" />
                 </div>

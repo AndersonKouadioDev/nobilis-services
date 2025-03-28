@@ -2,6 +2,7 @@ import { NumberTicker } from "@/components/magicui/number-ticker";
 import { Button } from "@nextui-org/react";
 import { Plus } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Propos() {
   return (
@@ -17,7 +18,7 @@ export default function Propos() {
             Nobilis Service, c’est une expertise complète réunie sous une seule enseigne. Que ce soit pour trouver votre bien immobilier, équiper votre entreprise ou bénéficier de solutions professionnelles adaptées, nous répondons à vos besoins avec engagement et qualité.
           </p>
 
-          <Button radius="full" variant="solid" className="bg-muted text-white">
+          <Button as={Link} href="/services" radius="full" variant="solid" className="bg-muted text-white">
             En savoir plus sur Nobilis Service
           </Button>
 

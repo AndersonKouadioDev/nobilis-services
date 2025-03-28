@@ -1,6 +1,7 @@
 "use client"
 import Image from "next/image";
 import { Button } from "@nextui-org/react";
+import Link from "next/link";
 
 
 
@@ -21,13 +22,13 @@ export default function Hero() {
         <div className="font-Title text-xl sm:text-3xl lg:text-5xl text-center md:text-start font-semibold drop-shadow-lg">
         NOBILIS <br /> IMMOBILIER
         </div>
-        <div className="font-subtitle text-sm sm:text-base lg:text-lg font-thin text-center md:text-start text-balance">
+        <div className="font-subtitle text-base sm:text-lg lg:text-2xl font-thin text-center md:text-start text-balance">
         Trouvez, vendez ou louez votre bien en toute sérénité avec Nobilis Immo. <br /> Notre expertise vous guide à chaque étape
         </div>
 
         {/* Bouton bien espacé */}
 
-        <Button variant="flat" className="bg-black/30 text-white">
+        <Button as={Link} href="/services/immobilier" variant="flat" className="bg-black/30 text-white">
             Voir plus
         </Button>
         

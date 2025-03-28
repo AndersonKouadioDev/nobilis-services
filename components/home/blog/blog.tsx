@@ -1,5 +1,6 @@
 import { Button } from '@nextui-org/react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 export default function Blog(){
@@ -58,7 +59,7 @@ export default function Blog(){
                     </div>
                   ))}
                 </div>
-                <Button className="bg-muted text-white" radius='full'>Voir plus d&apos;article</Button>
+                <Button as={Link} href="/blog" className="bg-muted text-white" radius='full'>Voir plus d&apos;article</Button>
             </div>
         </div>
     )

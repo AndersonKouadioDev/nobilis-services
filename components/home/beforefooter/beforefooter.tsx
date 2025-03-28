@@ -3,19 +3,23 @@
 import { Input } from "@nextui-org/react";
 import { Send } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function BeforeFooter() {
   return (
     <div className="w-full bg-[#072449] py-12 px-4 flex flex-col md:flex-row items-center gap-6">
       {/* 📌 Image */}
       <div className="flex-shrink-0">
+        <Link href="/">
         <Image
           src="/assets/images/logo-name.png" // Remplace par ton image
           alt="Newsletter"
           width={150}
           height={150}
           
+          
         />
+        </Link>
       </div>
 
       {/* 📌 Texte */}

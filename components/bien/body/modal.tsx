@@ -22,7 +22,7 @@ export default function MoreInfo() {
         Confiez-nous votre patrimoine dès aujourd&apos;hui
       </Button>
 
-      <Modal isOpen={isOpen} placement="center" backdrop="blur" size="full" onOpenChange={onOpenChange}>
+      <Modal isOpen={isOpen} placement="center" backdrop="blur" size="xl" onOpenChange={onOpenChange}>
         <ModalContent>
           {(onClose) => (
             <>

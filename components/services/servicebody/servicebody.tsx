@@ -1,6 +1,7 @@
 import { Button } from '@nextui-org/react';
 import { MoveRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function ServicesBody() {
   const services = [
@@ -8,19 +9,22 @@ export default function ServicesBody() {
       picture: "/assets/images/illustrations/service/immobilier.png",
       title: "NOBILIS IMMOBILIER",
       title2: "Nobilis Immo – Votre Partenaire Immobilier",
-      subtitle: "Que vous soyez à la recherche d'un bien, d'un acheteur ou d'un locataire, Nobilis Immo vous accompagne à chaque étape."
+      subtitle: "Que vous soyez à la recherche d'un bien, d'un acheteur ou d'un locataire, Nobilis Immo vous accompagne à chaque étape.",
+      link:"/services/immobilier"
     },
     {
       picture: "/assets/images/illustrations/service/solution.png",
       title: "NOBILIS SOLUTION",
       title2: "Nobilis Solutions – L'Expertise au Service de Votre Confort",
-      subtitle: "Que vous soyez à la recherche d'un bien, d'un acheteur ou d'un locataire, Nobilis Immo vous accompagne à chaque étape."
+      subtitle: "Que vous soyez à la recherche d'un bien, d'un acheteur ou d'un locataire, Nobilis Immo vous accompagne à chaque étape.",
+      link:"/services/solution"
     },
     {
       picture: "/assets/images/illustrations/service/equipement.png",
       title: "NOBILIS EQUIPEMENT",
       title2: "Nobilis Équipement – L'Excellence en Fourniture de Matériel",
-      subtitle: "Que vous soyez à la recherche d'un bien, d'un acheteur ou d'un locataire, Nobilis Immo vous accompagne à chaque étape."
+      subtitle: "Que vous soyez à la recherche d'un bien, d'un acheteur ou d'un locataire, Nobilis Immo vous accompagne à chaque étape.",
+      link:"/services/equipement"
     }
   ];
   
@@ -58,7 +62,7 @@ export default function ServicesBody() {
                   <Button 
                     color="primary" 
                     size="md" 
-                    
+                    as={Link} href={service.link}
                     className="rounded-t-full"
                   >
                     <MoveRight size={16} />
