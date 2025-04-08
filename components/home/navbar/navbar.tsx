@@ -18,6 +18,7 @@ import Image from "next/image";
 import Link from "next/link";
 import BlackMenu from '../../ui/dropdown';
 import Input from "@/components/ui/searchbar";
+import BlackMenuMobile from "@/components/ui/dropdown-menu";
 
 export const ChickenLogo = () => {
   return (
@@ -59,55 +60,27 @@ export default function Head() {
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
-          className="sm:hidden text-primary"
+          className="hidden text-primary"
         />
         <NavbarBrand>
+        <div className="block md:hidden">
+            <BlackMenuMobile/>
+            </div>
           <ChickenLogo />
-          <div className="font-Title text-primary text-4xl font-bold">NOBILIS SERVICES</div>
+          <div className="font-Title text-primary text-2xl md:text-4xl font-bold">NOBILIS SERVICES</div>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-6" justify="center">
-        {/* {menuItems.map((item) => (
-          <NavbarItem
-            key={item.name}
-            className={`${
-              pathname === item.link
-                ? "bg-primary rounded-xl text-white py-1 px-2"
-                : "text-white"
-            }`}
-          >
-            <Link
-              href={item.link}
-              className={`px-4 py-2 rounded   ${
-                pathname === item.link ? "text-white" : "text-primary"
-              }`}
-            >
-              {item.name}
-            </Link>
-          </NavbarItem>
-        ))} */}
         
       </NavbarContent>
 
       <NavbarContent justify="end">
-        {/* <NavbarItem>
-        <Input color="default" type="text" variant="underlined" label="Recherche" className="w-full" endContent={<Search className="w-5 h-5 text-black" />}/>
-        </NavbarItem> */}
         <NavbarItem className="hidden md:flex gap-2 items-center text-secondary">
           <Phone size={20}/>
           <div>+225  51 3237 8321</div>
         </NavbarItem>
         <NavbarItem>
-            {/* <Button
-              as={Link}
-              className="hidden md:flex bg-secondary text-white gap-2"
-              href="/brinner"
-              variant="flat"
-            >
-              <CalendarDays className="w-5 h-5" />
-              Réserver un brinner
-            </Button> */}
             <div className="hidden md:block">
             <BlackMenu/>
             </div>
@@ -129,15 +102,6 @@ export default function Head() {
           </NavbarMenuItem>
         ))}
         <NavbarItem>
-        {/* <Button
-              as={Link}
-              className=" bg-secondary text-white gap-2 flex font-semibold w-full"
-              href="/brinner"
-              variant="flat"
-            >
-              <CalendarDays className="w-5 h-5" />
-              Réserver un brinner
-            </Button> */}
         </NavbarItem>
       </NavbarMenu>
     </Navbar>

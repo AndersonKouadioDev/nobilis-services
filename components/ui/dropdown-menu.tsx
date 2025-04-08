@@ -12,7 +12,7 @@ import {
 import { Menu } from "lucide-react";
 import Link from "next/link";
 
-export default function BlackMenu() {
+export default function BlackMenuMobile() {
   const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
 
   
@@ -29,8 +29,8 @@ export default function BlackMenu() {
 
   return (
     <>
-      <Button onPress={onOpen} size="lg" radius="full" variant="flat" className="bg-black/50 text-white">
-        <Menu color="white" size={20} /> <div className="hidden md:block">Menu</div> 
+      <Button onPress={onOpen} size="lg" radius="full" variant="flat" className="bg-transparent">
+        <Menu  className="text-primary" size={20} /> <div className="hidden md:block">Menu</div> 
       </Button>
 
       <Drawer size="xs" className="bg-black/50 text-white" isOpen={isOpen} onOpenChange={onOpenChange}>
